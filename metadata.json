@@ -1,0 +1,9 @@
+
+{
+  "name": "Street Dog Defender Enterprise",
+  "description": "Enterprise command center for the Street Dog Defender ecosystem—autonomous wearables, smart city heatmaps, and AI safety simulations.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}
