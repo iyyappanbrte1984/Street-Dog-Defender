@@ -36,7 +36,13 @@ if (!MONGO_URI) {
 const app = express();
 
 app.use(cors({
-  origin: "*", // later you can restrict to Vercel domain
+    origin: [
+        "http://localhost:3000",
+        "https://street-dog-defender.vercel.app" // Your Vercel domain
+    ],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"]
 }));
 app.use(express.json());
 
