@@ -149,5 +149,16 @@ app.get('/api/preorder', async (req: Request, res: Response): Promise<void> => {
     res.status(200).json(orders);
   } catch (error) { res.status(500).json({ success: false }); }
 });
+app.get("/", (req, res) => {
+  res.status(200).send("Street Dog Defender Backend is running 🚀");
+});
+app.get("/api/health", (req, res) => {
+  res.status(200).json({
+    status: "ok",
+    service: "Street Dog Defender Backend",
+    time: new Date().toISOString()
+  });
+});
+
 
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
